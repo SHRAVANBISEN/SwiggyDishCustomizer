@@ -1,0 +1,4 @@
+package NAvigation
+
+class Screen {
+}
