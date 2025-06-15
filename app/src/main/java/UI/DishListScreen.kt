@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.dishcustomizerdemo.R
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -34,6 +35,13 @@ fun DishListScreen(
     onDishClick: (Dish) -> Unit,
     viewModel: DishListViewModel = viewModel()
 ) {
+    val systemUiController = rememberSystemUiController()
+    LaunchedEffect(true) {
+        systemUiController.setStatusBarColor(
+            color = Color.White,
+            darkIcons = false
+        )
+    }
     val dishes by viewModel.dishes.collectAsState()
 
     Box(modifier = Modifier.fillMaxSize().background(Color.White),

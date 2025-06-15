@@ -303,12 +303,6 @@ private fun EnhancedVisualFeedbackRow(
 
                 Box(
                     modifier = Modifier
-                        .shadow(
-                            elevation = (glowIntensity * 8).dp,
-                            shape = CircleShape,
-                            ambientColor = getSliderColor(category),
-                            spotColor = getSliderColor(category)
-                        )
                         .graphicsLayer {
                             scaleX = scale
                             scaleY = scale

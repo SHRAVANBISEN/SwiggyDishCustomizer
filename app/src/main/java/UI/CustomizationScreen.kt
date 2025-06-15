@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.dishcustomizerdemo.R
 import com.example.dishcustomizerdemo.ui.components.CustomizationSlider
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import kotlin.math.max
 import kotlin.math.min
 
@@ -44,6 +45,13 @@ fun CustomizationScreen(
     onBackClick: () -> Unit,
     viewModel: CustomizationViewModel = viewModel()
 ) {
+    val systemUiController = rememberSystemUiController()
+    LaunchedEffect(true) {
+        systemUiController.setStatusBarColor(
+            color = Color.White,
+            darkIcons = false
+        )
+    }
     val customization by viewModel.customization.collectAsState()
     val isAddedToCart by viewModel.isAddedToCart.collectAsState()
 
@@ -51,7 +59,6 @@ fun CustomizationScreen(
         viewModel.setDish(dish)
     }
 
-    // Calculate dynamic background colors based on customization values
     val dynamicBackgroundGradient by animateGradientAsState(
         targetColors = calculateDynamicColors(customization, dish),
         animationSpec = tween(
@@ -67,7 +74,7 @@ fun CustomizationScreen(
                     Text(
                         text = "Customize ${dish.name}",
                         fontWeight = FontWeight.Bold,
-                        color = Color.White
+                        color = Color.Black
                     )
                 },
                 navigationIcon = {
@@ -75,12 +82,12 @@ fun CustomizationScreen(
                         Icon(
                             Icons.Default.ArrowBack,
                             contentDescription = "Back",
-                            tint = Color.White
+                            tint = Color.Black
                         )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(0xFF00A651)
+                    containerColor = Color.White
                 )
             )
         },
@@ -392,10 +399,7 @@ private fun calculateDynamicColors(customization: DataClasses.DishCustomization,
     )
 }
 
-// Helper function to get dominant color from brush (simplified)
 private fun getDominantColor(brush: Brush): Color {
-    // Since we can't extract from Brush directly, return a default color
-    // In a real app, you'd track this separately
     return Color(0xFF00A651)
 }
 
