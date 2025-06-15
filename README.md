@@ -27,6 +27,13 @@ While traditional restaurant customization might seem complex, this project expl
 
 📺 **[Watch Full Tutorial & Demo on YouTube](https://youtube.com/shorts/BivxzaA2PdU?feature=share)**
 
+## 📱 Screenshots
+
+| Dish List | Customization Interface | Dynamic Backgrounds | Features Demo |
+|-----------|------------------------|-------------------|---------------|
+| ![Dish List](Screenshots/s4.jpg) | ![Customization Screen](Screenshots/s3.jpg) | ![Dynamic Background](Screenshots/s1.jpg) | ![Features](Screenshots/s4.jpg) |
+| Clean, modern food listing | Interactive sliders with animations | Color-adaptive themes | Advanced UI components |
+
 *Complete walkthrough of features, animations, and implementation details*
 ## 🛠️ Technical Highlights
 
@@ -130,12 +137,7 @@ This customization system could be revolutionary for:
 - **Advanced Animations** - Spring physics, state transitions, and custom easing
 - **Material Design 3** - Contemporary visual design system
 
-## 📱 Screenshots
 
-| Dish List | Customization Interface | Dynamic Backgrounds | Features Demo |
-|-----------|------------------------|-------------------|---------------|
-| ![Dish List](Screenshots/s4.jpg) | ![Customization Screen](Screenshots/s3.jpg) | ![Dynamic Background](Screenshots/s1.jpg) | ![Features](Screenshots/s4.jpg) |
-| Clean, modern food listing | Interactive sliders with animations | Color-adaptive themes | Advanced UI components |
 
 ---
 
